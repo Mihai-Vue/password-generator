@@ -2,7 +2,7 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 "/"];
 
 
-// generate two radom passwords when the user clicks the button
+// generate two random passwords when the user clicks the button
 // each password should be 15 characters long
 
 let pass = [];
@@ -15,7 +15,6 @@ rangeValue.addEventListener("input", getRangeValue);
 
 function getRangeValue(e) {
   let value = e.target.value;
-  console.log(value);
   rangeValue.value = value;
 }
 
@@ -37,16 +36,16 @@ function generatePassword() {
   finalPass = pass.join("");
 }
 function getPass() {
-  getpassOne()
-  getPassTwo()
+  getpassOne();
+  getPassTwo();
 }
 
 function getpassOne() {
-  generatePassword()
+  generatePassword();
   passwordOne.textContent = finalPass;
 }
 
 function getPassTwo() {
-  generatePassword()
+  generatePassword();
   passwordTwo.textContent = finalPass;
 }
