@@ -1,14 +1,27 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" defer></script>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
         <h1>Generate a <br><span>random password</span></h1>
         <P>Never use an insecure password again.</P>
-        <button id="btn-generate">Generate password</button>
-        <hr>
-        <script src="index.js"></script>
-        <button id="password-one"></button>
-        <button id="password-two"></button>
-    </body>
+        <div class="btn-pass">
+            <h3 id="password-one">password one</h3>
+            <h3 id="password-two">password two </h3>
+        </div>
+        <div class="pass-generate">
+            <label for="lenght">Password Lenght</label>
+            <input type="range" id="rangeValue" min="1" max="15" oninput="outputValue.value=rangeValue.value">
+            <output id="outputValue"></output>
+            <button id="btn-generate" onclick="getPass()">Generate password</button>
+        <div>
+    </div>    
+</body>
 </html>
