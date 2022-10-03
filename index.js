@@ -8,7 +8,7 @@ const passwordTwo = document.getElementById("password-two");
 rangeValue.addEventListener("input", getRangeValue);
 
 function getRangeValue(e) {
-  let value = e.target.value;
+  let {value} = e.target;
   rangeValue.value = value;
 }
 
@@ -30,10 +30,10 @@ function generatePassword() {
   finalPass = pass.join("");
 }
 
-function getPass() {
+document.getElementById("btn-generate").addEventListener("click", function (){
   getPassOne()
   getPassTwo()
-}
+})
 
 function getPassOne() {
   generatePassword()
